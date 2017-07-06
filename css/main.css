@@ -23,7 +23,7 @@
 
 .card-list {
     padding: 15px;
-    max-height: 190px;
+    max-height: 165px;
     overflow-y: scroll;
     line-height: 1.25;
 }
@@ -49,6 +49,26 @@
 .card-list a.is-active {
     background-color: #00d1b2;
     color: #fff;
+}
+
+.control.type1 {
+    float: left;
+    display: inline;
+    width: calc(100% - 90px);
+}
+
+.control.type1+.is-primary {
+    float: left;
+    display: inline;
+    margin-left: 8px;
+}
+
+.select {
+    margin-top: 10px;
+}
+
+.select select {
+    width: 100%;
 }
 
 @media (max-width: 639px) {
