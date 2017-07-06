@@ -11,7 +11,7 @@
     <script defer src="./js/jquery.ajax.min.js"></script>
     <script defer src="./js/imageFinder.js"></script>
     <script defer src="./js/app.js"></script>
-    <title>Keyword Image Find</title>
+    <title>Keyword Image Finder</title>
 </head>
 
 <body>
@@ -21,19 +21,21 @@
                 <h1>Keyword Image Finder</h1>
                 <!-- 검색 창-->
                 <div class="field">
-                    <label class="label">이미지명 검색하기</label>
-                    <p class="control has-icons-right">
-                        <input class="input is-success" type="text" placeholder="이미지명 검색">
-                        <button class="text-btn is-small is-right">
-                            검색하기
-                        </button>
-                    </p>
+                    <form class="search-form">
+                        <label class="label sr-only">이미지명 검색하기</label>
+                        <p class="control has-icons-right">
+                            <input class="input is-success" type="text" placeholder="이미지명 검색">
+                            <button type="submit" class="text-btn is-small is-right">
+                                검색
+                            </button>
+                        </p>
+                    </form>
                 </div>
                 <!-- 검색 창 끝 -->
 
                 <!-- 큰 이미지 -->
                 <div class="card">
-                    <div class="card-image">
+                    <div class="main-image-wrap card-image">
                         <figure class="image is-2by1">
                             <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
                         </figure>
@@ -43,113 +45,6 @@
 
                 <!-- 썸네일 이미지 시작 -->
                 <div class="card card-list-wrap">
-                    <ul class="card-list is-clearfix">
-                        <li>
-                            <a class="is-active">
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
                 <!-- 썸네일 이미지 끝 -->
 

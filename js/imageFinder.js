@@ -90,9 +90,21 @@ var ImageFinder = (function(global, $) {
             //     page_size: 5
             // }
         }).done(function(data) {
-            callback(data);
+            images = data.images;
+            callback(data.images);
         });
-        return images;
+    }
+    var id = function(id) {
+        var selected_item;
+        images.forEach(function(item) {
+            (id === item.collection_id) && (selected_item = item);
+        });
+
+        return selected_item;
+    }
+
+    var renderImage = function() {
+
     }
 
     function ImageFinder(arg) {
@@ -100,8 +112,17 @@ var ImageFinder = (function(global, $) {
             return new ImageFinder(arg);
         }
 
+        if(!arg) {
+            return this;
+        }
+
         if(isType(arg, 'object')) {
             init(arg);
+            return this;
+        }
+
+        if(isType(arg, 'array')) {
+            images = arg;
             return this;
         }
     }
