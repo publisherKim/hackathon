@@ -22,7 +22,6 @@
 
 .card-list {
     padding: 15px;
-    overflow-y: scroll;
     line-height: 1.25;
 }
 
@@ -88,4 +87,14 @@
     .card-list li {
         width: 33.33%;
     }
+}
+
+.modal .modal-content img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }

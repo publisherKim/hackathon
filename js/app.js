@@ -48,6 +48,7 @@
         var input = {
             phrase : phrase
         };
+        text_field.value = '';
         inputValidation(input);
 
         var data = {
