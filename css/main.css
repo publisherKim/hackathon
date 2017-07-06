@@ -182,7 +182,7 @@
     overflow: hidden;
 }
 .select-wrap.is-active {
-    height: 170px;
+    height: 180px;
 }
 .select-wrap button {
     display: block;
@@ -215,5 +215,8 @@
     }
     html {
         font-size:12px;
+    }
+    .select-wrap.is-active {
+        height: 150px;
     }
 }
