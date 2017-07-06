@@ -97,7 +97,7 @@ var ImageFinder = (function(global, $) {
     var id = function(id) {
         var selected_item;
         images.forEach(function(item) {
-            (id === item.collection_id) && (selected_item = item);
+            (id === item.id) && (selected_item = item);
         });
 
         return selected_item;
@@ -120,15 +120,11 @@ var ImageFinder = (function(global, $) {
             init(arg);
             return this;
         }
-
-        if(isType(arg, 'array')) {
-            images = arg;
-            return this;
-        }
     }
     ImageFinder.prototype = {
         constructor : ImageFinder,
-        getImageData : getImageData
+        getImageData : getImageData,
+        id : id
     }
     ImageFinder.include = function(obj) {
         mixin(ImageFinder, obj);
