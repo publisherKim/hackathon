@@ -70,7 +70,10 @@
         var nodeName = target.nodeName.toLowerCase();
         if(nodeName === 'img') {
             var main_image = main_image_wrap.querySelector('img');
-            ImageFinder(dataset.id);
+            console.log('target.dataset.id:', target.dataset.id);
+            var image = ImageFinder().id(target.dataset.id);
+            console.log('image:', image);
+            main_image.src = image.display_sizes[0].uri;
             console.log('main_image:', main_image);
         }
     }
