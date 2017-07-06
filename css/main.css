@@ -1,0 +1,62 @@
+.columns {
+    margin: 0 auto;
+}
+
+.card {
+    font-size: 1rem;
+}
+
+.field:not(:last-child) {
+    margin-top: 1rem;
+}
+
+.control.has-icons-right .text-btn.is-right {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.card-list-wrap {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.card-list {
+    padding: 15px;
+    max-height: 190px;
+    overflow-y: scroll;
+    line-height: 1.25;
+}
+
+.card-list li {
+    float: left;
+    display: inline;
+    width: 20%;
+}
+
+.card-list a {
+    border-radius: 2px;
+    color: #4a4a4a;
+    display: block;
+    padding: 0.5em 0.75em;
+}
+
+.card-list a:hover {
+    background-color: whitesmoke;
+    color: #00d1b2;
+}
+
+.card-list a.is-active {
+    background-color: #00d1b2;
+    color: #fff;
+}
+
+@media (max-width: 639px) {
+    .card-list {
+        padding: 10px;
+        max-height: 190px;
+    }
+    .card-list li {
+        width: 33.33%;
+    }
+}
