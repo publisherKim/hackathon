@@ -92,6 +92,7 @@
         card_list_wrap = root_wrap.querySelector('.card-list-wrap');
         modal_wrap = root_wrap.querySelector('.modal');
         modal_close = modal_wrap.querySelector('button');
+        // searchSelect = document.querySelector()
 
         ImageFinder(api_info);
 
