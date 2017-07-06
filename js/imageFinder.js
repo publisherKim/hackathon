@@ -90,8 +90,9 @@ var ImageFinder = (function(global, $) {
             //     page_size: 5
             // }
         }).done(function(data) {
+            // console.log('data:', data);
             images = data.images;
-            callback(data.images);
+            callback(data.images, data.result_count);
         });
     }
     var id = function(id) {
@@ -130,7 +131,8 @@ var ImageFinder = (function(global, $) {
         mixin(ImageFinder, obj);
     }
     ImageFinder.include({
-        mixin : mixin
+        mixin : mixin,
+        each : each
     });
 
     return ImageFinder;
