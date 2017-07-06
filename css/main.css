@@ -17,13 +17,11 @@
 }
 
 .card-list-wrap {
-    width: 90%;
     margin: 1rem auto;
 }
 
 .card-list {
     padding: 15px;
-    max-height: 165px;
     overflow-y: scroll;
     line-height: 1.25;
 }
@@ -61,6 +59,7 @@
     float: left;
     display: inline;
     margin-left: 8px;
+    width: 81.38px
 }
 
 .select {
@@ -71,10 +70,20 @@
     width: 100%;
 }
 
+.condition-list li {
+    float: left;
+    display: inline;
+    width: 33%;
+    text-align: center;
+}
+
+.condition-list li p {
+    text-align: center;
+}
+
 @media (max-width: 639px) {
     .card-list {
         padding: 10px;
-        max-height: 190px;
     }
     .card-list li {
         width: 33.33%;
