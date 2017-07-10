@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://bulma.io/css/bulma-docs.css">
+    <link rel="stylesheet" href="css/bulma-docs.css">
     <link rel="stylesheet" href="./css/main.css">
     <script defer src="./js/jquery.ajax.min.js"></script>
     <script defer src="./js/imageFinder.js"></script>
@@ -17,139 +16,97 @@
 <body>
     <div class="wrap">
         <div class="columns">
-            <div class="column">
-                <h1>Keyword Image Finder</h1>
+            <div class="column content-wrap">
+                <h1 class="title is-2">Keyword Image Finder</h1>
                 <!-- 검색 창-->
-                <div class="field">
-                    <label class="label">이미지명 검색하기</label>
-                    <p class="control has-icons-right">
-                        <input class="input is-success" type="text" placeholder="이미지명 검색">
-                        <button class="text-btn is-small is-right">
-                            검색하기
-                        </button>
-                    </p>
+                <div class="field is-clearfix">
+                    <form class="search-form">
+                        <label for="searchName" class="label sr-only">이미지명 검색하기</label>
+                        <p class="control type1">
+                            <input id="searchName" class="input is-success" type="text" placeholder="이미지명 검색">
+                            <div class="is-primary">
+                                <button class="button is-primary is-inverted is-focused">검색</button>
+                            </div>
+                        </p>
+                        <div class="box message-box">
+                        </div>
+                    </form>
                 </div>
                 <!-- 검색 창 끝 -->
+                <!-- 조건 검색 -->
+                <div class="field select-wrap box">
+                    <div class="block type0">
+                        <button class="button is-small is-white">조건 검색 설정</button>
+                    </div>
+                    <ul class="condition-list is-clearfix">
+                        <li>
+                            <div class="filter-number-of-people">
+                                <h2>사진 속 사람의 수</h2>
+                                <input class="sr-only" id="checkbox1" type="checkbox" name="number_of_people" value="none">
+                                <label class="" for="checkbox1">없음</label>
+                                <input class="sr-only" id="checkbox2" type="checkbox" name="number_of_people" value="one">
+                                <label class="" for="checkbox2">한명</label>
+                                <input class="sr-only" id="checkbox3" type="checkbox" name="number_of_people" value="two">
+                                <label class="" for="checkbox3">두명</label>
+                                <input class="sr-only" id="checkbox4" type="checkbox" name="number_of_people" value="group">
+                                <label class="" for="checkbox4">다수</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="filter-orientations">
+                                <h2>사람의 나이</h2>
+                                <input class="sr-only" id="checkbox13" type="checkbox" name="age_of_people" value="baby">
+                                <label for="checkbox13">아기</label>
+                                <input class="sr-only" id="checkbox14" type="checkbox" name="age_of_people" value="child">
+                                <label for="checkbox14">어린이</label>
+                                <input class="sr-only" id="checkbox15" type="checkbox" name="age_of_people" value="young_adult">
+                                <label for="checkbox15">청소년</label>
+                                <input class="sr-only" id="checkbox16" type="checkbox" name="age_of_people" value="adults_only">
+                                <label for="checkbox16">어른</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="filter-orientations">
+                                <h2>사진 방향</h2>
+                                <input class="sr-only" id="checkbox9" type="checkbox" name="orientations" value="Horizontal">
+                                <label for="checkbox9">수평</label>
+                                <input class="sr-only" id="checkbox10" type="checkbox" name="orientations" value="Vertical">
+                                <label for="checkbox10">수직</label>
+                                <input class="sr-only" id="checkbox11" type="checkbox" name="orientations" value="PanoramicHorizontal">
+                                <label for="checkbox11">파노라마식 수평</label>
+                                <input class="sr-only" id="checkbox12" type="checkbox" name="orientations" value="PanoramicVertical">
+                                <label for="checkbox12">파노라마식 수직</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="filter-graphical-styles">
+                                <h2>그래픽 스타일</h2>
+                                <input class="sr-only" id="checkbox6" type="checkbox" name="graphical_styles" value="fine_art">
+                                <label for="checkbox6">파인 아트</label>
+                                <input class="sr-only" id="checkbox7" type="checkbox" name="graphical_styles" value="illustration">
+                                <label for="checkbox7">일러스트레이션</label>
+                                <input class="sr-only" id="checkbox8" type="checkbox" name="graphical_styles" value="photography">
+                                <label for="checkbox8">포토그래피</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 조건 검색 끝 -->
 
                 <!-- 큰 이미지 -->
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-2by1">
-                            <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                        </figure>
+                <div class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <p class="image is-4by3">
+                            <img src="http://bulma.io/images/placeholders/1280x960.png">
+                        </p>
                     </div>
+                    <button class="modal-close is-large"></button>
                 </div>
                 <!-- 큰 이미지 끝-->
 
                 <!-- 썸네일 이미지 시작 -->
-                <div class="card card-list-wrap">
-                    <ul class="card-list is-clearfix">
-                        <li>
-                            <a class="is-active">
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <figure class="image is-2by1">
-                                    <img src="http://bulma.io/images/placeholders/640x320.png" alt="Image">
-                                </figure>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="card-list-wrap is-centered">
                 </div>
                 <!-- 썸네일 이미지 끝 -->
 

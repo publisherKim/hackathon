@@ -1,5 +1,6 @@
-.columns {
+.wrap .columns {
     margin: 0 auto;
+    display: block;
 }
 
 .card {
@@ -17,33 +18,28 @@
 }
 
 .card-list-wrap {
-    width: 90%;
+    text-align: center;
     margin: 1rem auto;
 }
 
 .card-list {
-    padding: 15px;
-    max-height: 190px;
-    overflow-y: scroll;
+    padding: 10px;
     line-height: 1.25;
 }
 
 .card-list li {
     float: left;
-    display: inline;
     width: 20%;
 }
 
 .card-list a {
-    border-radius: 2px;
-    color: #4a4a4a;
     display: block;
-    padding: 0.5em 0.75em;
+    padding: 0.3em 0.4em;
 }
 
-.card-list a:hover {
-    background-color: whitesmoke;
-    color: #00d1b2;
+.card-list a:hover .image,
+.card-list a:focus .image {
+    transform: scale(1.1);
 }
 
 .card-list a.is-active {
@@ -51,12 +47,210 @@
     color: #fff;
 }
 
+.control.type1 {
+    float: left;
+    width: calc(100% - 70px);
+}
+
+.control.type1+.is-primary {
+    float: left;
+    margin-left: 8px;
+    width: 60px;
+}
+
+.select {
+    margin-top: 10px;
+}
+
+.select select {
+    width: 100%;
+}
+
+.condition-list {
+    padding: 10px 0;
+}
+
+.condition-list.is-active {
+    display: block;
+}
+
+.condition-list li {
+    width: 100%;
+    padding: 6px 5px 4px 20px;
+}
+
+.condition-list h2 {
+    font-size: 0.9rem;
+    width: 8rem;
+    display: inline-block;
+}
+
+.condition-list [type="checkbox"]:checked+label {
+    background: #00d1b2;
+}
+
+.condition-list label {
+    background: gray;
+    color: #fff;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 3px;
+    margin-right: 3px;
+}
+
+.condition-list [type="checkbox"]:hover+label,
+.condition-list [type="checkbox"]:focus+label {
+    border: 1px solid #00d1b2;
+}
+
+.modal .modal-content img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.search-button {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.search-wrap {
+    /*height: 20px;*/
+    overflow: hidden;
+    transition: all;
+}
+
+.button.is-primary.is-inverted {
+    display: block;
+}
+
+.block.type0 {
+    text-align: center;
+    margin: 0px;
+}
+
+.box.type0 {
+    padding: 10px;
+}
+
+.image.is-2by1 {
+    height: 0;
+    padding-top: calc(100% * 9 / 16);
+    overflow: hidden;
+    position: relative;
+    max-height: 100%;
+    box-shadow: 2px 2px 4px black;
+}
+
+.image.is-2by1.vertical {
+    padding-top: calc(100% * 6 / 5);
+}
+
+.image.is-2by1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image.is-2by1 img.fit-width {
+    width: 100%;
+    height: auto;
+}
+
+.image.is-2by1 img.fit-height {
+    width: auto;
+    height: 100%;
+}
+
+.btn-more {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.select-wrap {
+    height: 33px;
+    padding: 0;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.select-wrap.is-active {
+    height: 190px;
+}
+
+.select-wrap button {
+    box-sizing: border-box;
+    display: block;
+    padding: 8px;
+    height: 33px;
+    width: 100%;
+}
+
+.select-wrap .is-white:hover,
+.select-wrap .is-white:focus {
+    background: whitesmoke;
+}
+
+.search-form {
+    position: relative;
+}
+
+.modal-content {
+    overflow: visible;
+}
+
+.message-box {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: -45px;
+    padding: 5px 10px 5px 10px;
+}
+
+.message-box.is-active {
+    display: block;
+}
+
 @media (max-width: 639px) {
     .card-list {
         padding: 10px;
-        max-height: 190px;
     }
     .card-list li {
         width: 33.33%;
+    }
+    .card-list a {
+        padding: 0.2em 0.3em;
+    }
+    html {
+        font-size: 12px;
+    }
+    .select-wrap.is-active {
+        height: 155px;
+    }
+    .select-wrap {
+        height: 25px;
+    }
+    .select-wrap button {
+        height: 25px;
     }
 }
